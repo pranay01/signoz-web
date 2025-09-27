@@ -5,7 +5,7 @@ date: 2025-09-25
 tags: [OpenTelemetry]
 authors: [pranay]
 description: LLM Observability breaks in wild today as new libraries like OpenInference don't adhere to OpenTelemetry standards leading to silos and suboptimal performance for users who want to tie LLM observability with rest of their observability stack
-image: /img/blog/2025/04/cloudwatch-cover.webp
+image: /img/blog/2025/09/LLM-Observability-OpenTelemetry.png
 keywords: [LLM Observability, OpenInference, OpenTelemetry, OpenStandards]
 ---
 
@@ -81,7 +81,7 @@ None of these are great options.
 
 At SigNoz we’re all-in on OpenTelemetry. One reason: OTel’s consistency enables out-of-the-box experiences across your *whole* stack. Example: we can auto-surface [external API](https://signoz.io/docs/external-api-monitoring/overview/) usage and performance based on span kinds and attributes. When parts of the app send telemetry via non-OTel conventions, those views degrade.
 
-Chatwoot lands similarly: their entire product already emits OTel. Pulling in a second telemetry standard just for LLMs fragments the picture and complicates how they go about observability. This also silos their observability into different products which makes it difficult to solves issues whne they occur.
+Chatwoot lands similarly: their entire product already emits OTel. Pulling in a second telemetry standard just for LLMs fragments the picture and complicates how they go about observability. This also silos their observability into different products which makes it difficult to solves issues when they occur.
 
 ## Takeaways for builders
 
@@ -89,7 +89,7 @@ Chatwoot lands similarly: their entire product already emits OTel. Pulling in a 
 * **LLM specific libraries** - Even if you have to use LLM specific libraries like OpenInference, try to keep your usage as close to OpenTelemetry as possible so that you are aware what non-OTel attributes you are using which may break things.
 * **Follow OTel GenAI working group** - There is active work happening in OTel [Gen AI working group](https://opentelemetry.io/blog/2024/otel-generative-ai/). Follow the work happening there and do share your use cases so that the standards which OpenTelemetry builds are able to cater to most common use cases.
 
-As the LLM space, is still evolving rapidly, we as a community need to share our voices so that the standards are robust.
+As the LLM space is still evolving rapidly, we as a community need to share our voices so that the standards are robust.
 
 ---
 
